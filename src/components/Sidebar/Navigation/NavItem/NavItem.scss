@@ -1,0 +1,26 @@
+.nav__item {
+
+  a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #78829d;
+    padding: 12.5px 20px;
+    line-height: 0.8;
+    display: block;
+
+    &.active {
+      background-color: #15a4fa;
+      color: #ffffff;
+    }
+
+    &:hover {
+      @extend .active;
+    }
+
+
+    i {
+      margin: 0 10px 0 0;
+      font-size: 14px;
+    }
+  }
+}
