@@ -3,9 +3,9 @@ import './NavItem.scss';
 
 import { NavLink } from "react-router-dom";
 
-const NavItem = props => (
+const NavItem = ({to, icon, name}) => (
     <li className="nav__item">
-        <NavLink to={props.to} activeClassName="active"><i className={props.icon} aria-hidden="true"></i>{props.name}</NavLink>
+        <NavLink to={to} activeClassName="active"><i className={icon} aria-hidden="true"></i>{name}</NavLink>
     </li>
 );
 
