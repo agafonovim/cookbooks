@@ -1,0 +1,16 @@
+.header {
+  border-bottom: 1px solid #dadfea;
+  background-color: #eef1f7;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+
+  &__page-header {
+    height: 70px;
+  }
+
+  &__title {
+    font-size: 22px;
+    color: #444c63;
+  }
+}
