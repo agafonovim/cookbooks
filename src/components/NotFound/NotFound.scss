@@ -1,10 +1,4 @@
 .page {
-  width: 100%;
-  &__content-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   &__not-found {
     background-image: url("../../assets/img/page-not-found.png");
