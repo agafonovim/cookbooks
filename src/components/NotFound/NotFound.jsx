@@ -1,11 +1,10 @@
 import React from 'react';
 import './NotFound.scss';
-import BlankPage from "../BlankPage/BlankPage";
 
 const NotFound = () => (
-    <BlankPage>
-        <div className="page__not-found"></div>
-    </BlankPage>
+    <div className="page__not-found page__content-center">
+        <div className="image-not-found"></div>
+    </div>
 );
 
 export default NotFound;

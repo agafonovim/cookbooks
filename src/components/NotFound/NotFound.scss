@@ -1,6 +1,10 @@
-.page {
+.page__not-found {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &__not-found {
+  .image-not-found {
     background-image: url("../../assets/img/page-not-found.png");
     height: 300px;
     width: 400px;

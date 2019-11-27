@@ -1,11 +1,12 @@
 import React from 'react';
 import './NoMatchesFound.scss';
-import BlankPage from "../BlankPage/BlankPage";
 
 const NoMatchesFound = () => (
-    <BlankPage>
-        <span className="text-muted">К сожалению, читать нечего :(</span>
-    </BlankPage>
+    <div className="page__no-matches-found">
+        <div>
+            <span className="text-muted">Nothing is here :(</span>
+        </div>
+    </div>
 );
 
 export default NoMatchesFound;
