@@ -21,7 +21,10 @@ const App = () => {
         <Router>
             <div className="app">
                 <Sidebar
-                    onClick={() => {setModal(showModal ? 0 : 1); setModalStatus("add")}}
+                    onClick={() => {
+                        setModal(!showModal);
+                        setModalStatus("add");
+                    }}
                 />
                 <Switch>
                     <Route exact path="/">
