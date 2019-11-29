@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     BrowserRouter as Router,
     Redirect,
@@ -8,19 +8,30 @@ import {
 
 import './App.scss';
 import Sidebar from "../Sidebar/Sidebar";
-import Content from "../Content/Content";
+import Browse from "../Browse/Browse";
 import NotFound from "../NotFound/NotFound";
+import Modal from "../Modal/Modal";
 
 const App = () => {
+    const [showModal, setModal] = useState(0);
+    const [modalStatus, setModalStatus] = useState(null);
+    const modal = showModal ? <Modal modalStatus={modalStatus} cancel={() => setModal(0)} /> : null;
+
     return (
         <Router>
             <div className="app">
-                <Sidebar />
+                <Sidebar
+                    onClick={() => {setModal(showModal ? 0 : 1); setModalStatus("add")}}
+                />
                 <Switch>
-                    <Route path="/browse" component={Content} />
+                    <Route exact path="/">
+                        <Redirect to="/browse" />
+                    </Route>
+                    <Route path="/browse" render={() => <Browse />} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </div>
+            {modal}
         </Router>
     )
 };

@@ -3,9 +3,9 @@ import './Sidebar.scss';
 import Navigation from "../Navigation/Navigation";
 import AddButton from "../AddButton/AddButton";
 
-const Sidebar = () => (
+const Sidebar = props => (
     <aside className="sidebar">
-        <AddButton/>
+        <AddButton onClick={props.onClick} />
         <Navigation />
     </aside>
 );
