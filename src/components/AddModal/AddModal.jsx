@@ -1,11 +1,46 @@
 import React from 'react';
 import './AddModal.scss';
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import Main from "./Main/Main";
+import { Formik, Form } from "formik";
 
-const AddModal = (props) => {
+const AddModal = props => {
     return (
             <div className="add-modal">
                 <Header title="Add New Books" cancel={props.cancel}/>
+                <Formik
+                    initialValues={{title: "",
+                        author: "",
+                        publisher: "",
+                        paperback: "",
+                        ISBN: "",
+                        genre: "",
+                        info: ""
+                    }}
+                    validate={values => {
+                        let errors = {};
+                        if (values.title === "") {
+                            errors.title = true;
+                        }
+                        if (values.author === "") {
+                            errors.author = true;
+                        }
+                        if (values.publisher === "") {
+                            errors.publisher = true;
+                        }
+                        if (values.ISBN === "") {
+                            errors.ISBN = true;
+                        }
+                        return errors;
+                    }}
+                    onSubmit={() => alert("Form is validated! Submitting the form...")}
+                >
+                    <Form>
+                        <Main {...props} />
+                        <Footer {...props} />
+                    </Form>
+                </Formik>
             </div>
     );
 };
