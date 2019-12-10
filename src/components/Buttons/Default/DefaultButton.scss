@@ -1,0 +1,22 @@
+.default-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: #97b3ce;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #86a1b9;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

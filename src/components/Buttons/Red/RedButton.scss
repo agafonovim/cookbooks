@@ -1,0 +1,22 @@
+.red-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: #f2795a;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #f58a6e;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
