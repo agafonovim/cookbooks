@@ -10,7 +10,8 @@ const AddModal = props => {
             <div className="add-modal">
                 <Header title="Add New Books" cancel={props.cancel}/>
                 <Formik
-                    initialValues={{title: "",
+                    initialValues={{
+                        title: "",
                         author: "",
                         publisher: "",
                         paperback: "",
@@ -34,7 +35,7 @@ const AddModal = props => {
                         }
                         return errors;
                     }}
-                    onSubmit={() => alert("Form is validated! Submitting the form...")}
+                    onSubmit={values => console.log(values)}
                 >
                     <Form>
                         <Main {...props} />

@@ -1,7 +1,8 @@
-.nav {
-  border-bottom: 1px solid #323949;
+.modal-nav {
   display: flex;
   flex-flow: column wrap;
+  width: 200px;
+  flex: none;
 
   &__list {
     list-style-type: none;

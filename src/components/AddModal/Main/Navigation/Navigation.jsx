@@ -2,16 +2,15 @@ import React from 'react';
 import './Navigation.scss';
 import NavItem from "./NavItem/NavItem";
 
-const Navigation = () => (
-    <nav className="nav">
-        <ul className="nav__list">
-            <NavItem name="Now Reading" icon="fa fa-book" to="/now-reading" />
-            <NavItem name="Browse" icon="fa fa-globe" to="/browse" />
-            <NavItem name="Buy Books" icon="fa fa-shopping-cart" to="/buy" />
-            <NavItem name="Favourite Books" icon="fa fa-star" to="/favourite" />
-            <NavItem name="Wishlist" icon="fa fa-th-list" to="/wishlist" />
+const Navigation = props => (
+    <div className="modal-nav">
+        <ul className="modal-nav__list">
+            <NavItem {...props} name="General" icon="fa fa-align-center" />
+            <NavItem {...props} name="Genre" icon="fa fa-tags" />
+            <NavItem {...props} name="Poster" icon="fa fa-file-image-o" />
+            <NavItem {...props} name="Info" icon="fa fa-info-circle" />
         </ul>
-    </nav>
+    </div>
 );
 
 export default Navigation;
