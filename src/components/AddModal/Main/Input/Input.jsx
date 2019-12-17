@@ -1,17 +1,19 @@
 import React from 'react';
 import './Input.scss';
+
 import { Field } from "formik";
 
-const Input = props => (
+const Input = ({title, required, children, ...props}) => (
     <div className="input">
-        <label htmlFor={props.title.toLowerCase()}>{props.title}{props.required && <span className="red-text">*</span>}</label>
+        <label htmlFor={title.toLowerCase()}>{title}{required && <span className="red-text">*</span>}</label>
         <Field
-            as={"input"}
-            type={props.type}
-            name={props.title.toLowerCase()}
-            id={props.title.toLowerCase()}
-            placeholder={`Enter ${props.title}`}
+            as="input"
+            name={title.toLowerCase()}
+            id={title.toLowerCase()}
+            placeholder={`Enter ${title}`}
+            {...props}
         />
+        {children && <span className="input_error-message red-text">{children}</span>}
     </div>
 );
 

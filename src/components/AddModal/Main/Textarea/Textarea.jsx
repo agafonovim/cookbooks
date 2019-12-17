@@ -1,14 +1,16 @@
 import React from 'react';
 import './Textarea.scss';
+
 import { Field } from "formik";
 
-const Textarea = props => (
+const Textarea = ({title, required, ...props}) => (
     <div className="textarea">
-        <label htmlFor={props.title.toLowerCase()}>{props.title}{props.required && <span className="red-text">*</span>}</label>
+        <label htmlFor={title.toLowerCase()}>{title}{required && <span className="red-text">*</span>}</label>
         <Field
-            as={"textarea"}
-            name={props.title.toLowerCase()}
-            placeholder={`Enter ${props.title}`}
+            as="textarea"
+            id={title.toLowerCase()}
+            name={title.toLowerCase()}
+            placeholder={`Enter ${title}`}
         />
     </div>
 );

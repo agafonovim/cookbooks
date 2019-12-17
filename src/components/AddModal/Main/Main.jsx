@@ -1,37 +1,32 @@
 import React from 'react';
 import { Tabs, Panel } from '@bumaga/tabs';
-// import { Field } from "formik";
 
 import './Main.scss';
 import Navigation from "./Navigation/Navigation";
-import Input from "./Input/Input";
-import Textarea from "./Textarea/Textarea";
 
-const Main = () => {
+/* Импорт табов */
+import General from "../Tabs/General";
+import Genre from "../Tabs/Genre";
+import Info from "../Tabs/Info";
+import Poster from "../Tabs/Poster";
 
+const Main = props => {
     return (
         <div className="main">
             <Tabs>
                 <Navigation />
                 <div className="modal-content">
                     <Panel>
-                        <Input title="Title" type="text" required />
-                        <Input title="Author" type="text" required />
-                        <Input title="Publisher" type="text" required />
-                        <div className="group">
-                            <Input title="Paperback" type="text" />
-                            <Input title="ISBN" type="text" required />
-                        </div>
-                        <Input title="Summary" type="text" />
+                        <General />
                     </Panel>
                     <Panel>
-                        <Input title="Genre" type="text" />
+                        <Genre />
                     </Panel>
                     <Panel>
-                        <Input title="Poster" type="file"/>
+                        <Poster />
                     </Panel>
                     <Panel>
-                        <Textarea title="Information"/>
+                        <Info />
                     </Panel>
                 </div>
             </Tabs>

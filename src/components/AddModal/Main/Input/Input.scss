@@ -6,6 +6,14 @@
     margin-bottom: 0;
   }
 
+  &_error-message {
+    margin-top: 5px;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="file"] {
