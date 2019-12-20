@@ -1,0 +1,31 @@
+.filter {
+  font-family: "Myriad Pro", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  color: #8c97b2;
+  text-align: center;
+
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 0 10px;
+  background-color: transparent;
+  border-radius: 9.5px;
+
+  &:hover {
+    outline: none;
+    color: #ffffff;
+    background-color: #97b3ce;
+  }
+
+  &:focus {
+    outline: none;
+    color: #ffffff;
+    background-color: #97b3ce;
+  }
+
+  &.active {
+    color: #ffffff;
+    background-color: #97b3ce;
+  }
+}

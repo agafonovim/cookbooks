@@ -1,13 +1,15 @@
 import React from 'react';
 import './Browse.scss';
-import Header from "../Header/Header";
+import Header from "./Header/Header";
 import NoMatchesFound from "../NoMatchesFound/NoMatchesFound";
+import Main from "./Main/Main";
 
-const Browse = () => {
+const Browse = ({booksData}) => {
+    console.log(booksData);
     return (
         <div className="browse-page">
             <Header title="Browse Available Books"/>
-            <NoMatchesFound />
+            {(booksData === null) ? <NoMatchesFound /> : <Main />}
         </div>
     )
 };
