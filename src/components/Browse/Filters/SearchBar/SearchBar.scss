@@ -26,26 +26,13 @@
       color: #8c97b2;
     }
   }
-  button {
+  i {
+    color: #8c97b2;
+    font-size: 14px;
     position: absolute;
     top: 0;
-    right: 10px;
-    height: 100%;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    width: 32px;
-
-    &:hover {
-      outline: none;
-    }
-    &:focus {
-      outline: none;
-    }
-
-    i {
-      color: #8c97b2;
-      font-size: 14px;
-    }
+    right: 0;
+    line-height: 31px;
+    margin-right: 18px;
   }
 }

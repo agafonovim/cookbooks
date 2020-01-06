@@ -3,7 +3,7 @@ import './Filters.scss';
 import Filter from "./Filter/Filter";
 import SearchBar from "./SearchBar/SearchBar";
 
-const Filters = props => {
+const Filters = ({...props}) => {
     return (
         <div className="filters">
             <div>
@@ -12,7 +12,7 @@ const Filters = props => {
                 <Filter title="Most Popular" />
                 <Filter title="Free Books" />
             </div>
-            <SearchBar />
+            <SearchBar {...props} />
         </div>
     )
 };

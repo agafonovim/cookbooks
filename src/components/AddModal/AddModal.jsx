@@ -6,14 +6,14 @@ import Main from "./Main/Main";
 import {Formik, Form} from "formik";
 import * as Yup from 'yup';
 
-const AddModal = props => {
+const AddModal = ({updateBooks, ...props}) => {
 
     const addToLocalStorage = (name, value) => {
         let existing = JSON.parse(localStorage.getItem(name));
         existing = existing ? existing : [];
-        existing.push(value);
+        existing.push({...value, id: (existing.length + 1)});
         localStorage.setItem(name, JSON.stringify(existing));
-    }
+    };
 
     return (
             <div className="add-modal">
@@ -27,7 +27,8 @@ const AddModal = props => {
                         isbn: "",
                         genre: "",
                         poster_image: null,
-                        information: ""
+                        information: "",
+                        summary: ""
                     }}
                     validationSchema={Yup.object().shape({
                         title: Yup.string()
@@ -44,8 +45,10 @@ const AddModal = props => {
                             .integer('Not integer number')
                             .required('Required'),
                     })}
-                    onSubmit={values => {
-                        addToLocalStorage("cookbooks", values)
+                    onSubmit={(values) => {
+                        addToLocalStorage("cookbooks", values);
+                        updateBooks();
+                        props.cancel();
                     }}
                 >
                     <Form>

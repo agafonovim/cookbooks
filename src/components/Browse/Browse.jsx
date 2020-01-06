@@ -9,7 +9,7 @@ const Browse = ({booksData}) => {
     return (
         <div className="browse-page">
             <Header title="Browse Available Books"/>
-            {(booksData === null) ? <NoMatchesFound /> : <Main />}
+            {(booksData === null) ? <NoMatchesFound /> : <Main booksData={booksData} />}
         </div>
     )
 };

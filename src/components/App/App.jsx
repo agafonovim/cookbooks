@@ -13,12 +13,17 @@ import NotFound from "../NotFound/NotFound";
 import Modal from "../Modal/Modal";
 
 const App = () => {
+    const updateBooksData = () => JSON.parse(localStorage.getItem("cookbooks"));
+    const [booksData, setBooksData] = useState(updateBooksData);
     const [showModal, setModal] = useState(0);
     const [modalStatus, setModalStatus] = useState(null);
-    const modal = showModal ? <Modal modalStatus={modalStatus} cancel={() => setModal(0)} /> : null;
+    let modal = (showModal ? <Modal modalStatus={modalStatus}
+                                    cancel={() => setModal(0)}
+                                    updateBooks={() => setBooksData(updateBooksData)}/> : null);
 
     return (
         <Router>
+
             <div className="app">
                 <Sidebar
                     onClick={() => {
@@ -30,7 +35,7 @@ const App = () => {
                     <Route exact path="/">
                         <Redirect to="/browse" />
                     </Route>
-                    <Route path="/browse" render={() => <Browse />} />
+                    <Route path="/browse" render={() => <Browse booksData={booksData} />} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </div>

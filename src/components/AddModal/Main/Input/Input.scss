@@ -36,18 +36,15 @@
     text-align: left;
     width: 100%;
     appearance: none;
-  }
-  input[type="text"]::placeholder,
-  input[type="email"]::placeholder
-  {
-    color: #8c97b2;
-  }
 
-  input[type="text"]:focus,
-  input[type="email"]:focus
-  {
-    border: 1px solid #9A9EA9;
-    outline: none;
+    &::placeholder {
+      color: #8c97b2;
+    }
+
+    &:focus {
+      border: 1px solid #9A9EA9;
+      outline: none;
+    }
   }
 
   label {
