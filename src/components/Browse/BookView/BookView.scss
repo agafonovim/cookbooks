@@ -1,0 +1,55 @@
+.book {
+  padding: 0;
+  margin-top: 29px;
+  margin-left: 20px;
+  outline: none;
+  background: transparent;
+  display: block;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+
+  &:hover {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_poster {
+    border-radius: 4px;
+    height: 275px;
+    width: 200px;
+  }
+
+  &_title {
+    color: #444c63;
+    display: block;
+    margin-top: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  &_author {
+    color: #6f7d95;
+    display: block;
+    margin-top: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  &_rating {
+    i {
+      margin-top: 8px;
+      color: #ffab00;
+      margin-right: 1px;
+    }
+    i:last-child {
+      margin-right: 0;
+    }
+  }
+}
