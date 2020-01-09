@@ -28,7 +28,8 @@ const AddModal = ({updateBooks, ...props}) => {
                         genre: "",
                         poster_image: null,
                         information: "",
-                        summary: ""
+                        summary: "",
+                        rating: Math.floor(1 + Math.random() * (5 + 1 - 1))
                     }}
                     validationSchema={Yup.object().shape({
                         title: Yup.string()

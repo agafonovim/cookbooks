@@ -5,7 +5,6 @@ import NoMatchesFound from "../NoMatchesFound/NoMatchesFound";
 import Main from "./Main/Main";
 
 const Browse = ({booksData}) => {
-    console.log(booksData);
     return (
         <div className="browse-page">
             <Header title="Browse Available Books"/>
