@@ -6,6 +6,7 @@ import AllBooks from "../Tabs/AllBooks";
 import MostRecent from "../Tabs/MostRecent";
 import Search from "../Tabs/Search";
 import FreeBooks from "../Tabs/FreeBooks";
+import MostPopular from "../Tabs/MostPopular";
 
 const Panel = ({ component }) => {
     const isActive = usePanelState();
@@ -19,9 +20,9 @@ const Main = ({booksData}) => {
         <Tabs>
             <Filters setSearchValue={(e) => setSearchValue(e.target.value)} />
             <div className="books">
-                <Panel component={<AllBooks booksData={booksData}/>} />
-                <Panel component={<MostRecent booksData={booksData}/>} />
-                <Panel component={<span>Тут ничего нет</span>}/>
+                <Panel component={<AllBooks booksData={booksData} />} />
+                <Panel component={<MostRecent booksData={booksData} />} />
+                <Panel component={<MostPopular booksData={booksData} />}/>
                 <Panel component={<FreeBooks booksData={booksData} />}/>
                 <Panel component={<Search booksData={booksData} searchValue={searchValue} />} />
             </div>
