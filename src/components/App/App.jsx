@@ -36,7 +36,7 @@ const App = () => {
                         <Redirect to="/browse" />
                     </Route>
                     <Route path="/browse" render={() => <Browse booksData={booksData} />} />
-                    <Route path="*" component={NotFound} />
+                    <Route path="*" render={() => <NotFound page />} />
                 </Switch>
             </div>
             {modal}
