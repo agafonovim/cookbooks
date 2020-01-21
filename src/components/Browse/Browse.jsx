@@ -4,11 +4,11 @@ import Header from "./Header/Header";
 import NoMatchesFound from "../NoMatchesFound/NoMatchesFound";
 import Main from "./Main/Main";
 
-const Browse = ({booksData}) => {
+const Browse = ({booksData, ...props}) => {
     return (
         <div className="browse-page">
             <Header title="Browse Available Books"/>
-            {(booksData === null) ? <NoMatchesFound /> : <Main booksData={booksData} />}
+            {(booksData === null) ? <NoMatchesFound /> : <Main booksData={booksData} {...props} />}
         </div>
     )
 };

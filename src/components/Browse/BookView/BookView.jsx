@@ -2,9 +2,9 @@ import React from 'react';
 import './BookView.scss';
 import imageNotFound from '../../../assets/img/image-not-found.png';
 
-const BookView = ({title, author, poster_image}) => {
+const BookView = ({title, author, poster_image, ...props}) => {
     return (
-        <button className="book" type="button">
+        <button className="book" type="button" onClick={props.onClick}>
             {poster_image ?
                 <img className="book_poster" width={200} src={poster_image} alt={title}/> :
                 <img className="book_poster" width={200} src={imageNotFound} alt="Изображение не найдено"/>

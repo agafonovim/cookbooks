@@ -13,18 +13,18 @@ const Panel = ({ component }) => {
     return isActive ? component : null;
 };
 
-const Main = ({booksData}) => {
+const Main = ({booksData, ...props}) => {
     const [searchValue, setSearchValue] = useState(0);
 
     return (
         <Tabs>
             <Filters setSearchValue={(e) => setSearchValue(e.target.value)} />
             <div className="books">
-                <Panel component={<AllBooks booksData={booksData} />} />
-                <Panel component={<MostRecent booksData={booksData} />} />
-                <Panel component={<MostPopular booksData={booksData} />}/>
-                <Panel component={<FreeBooks booksData={booksData} />}/>
-                <Panel component={<Search booksData={booksData} searchValue={searchValue} />} />
+                <Panel component={<AllBooks booksData={booksData} {...props} />} />
+                <Panel component={<MostRecent booksData={booksData} {...props} />} />
+                <Panel component={<MostPopular booksData={booksData} {...props} />}/>
+                <Panel component={<FreeBooks booksData={booksData} {...props} />}/>
+                <Panel component={<Search booksData={booksData} searchValue={searchValue} {...props} />} />
             </div>
         </Tabs>
     )

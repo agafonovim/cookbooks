@@ -2,7 +2,7 @@ import React from 'react';
 import BookView from "../BookView/BookView";
 import NotFound from "../../NotFound/NotFound";
 
-const Search = ({booksData, searchValue}) => {
+const Search = ({booksData, searchValue, ...props}) => {
     searchValue = searchValue.toLowerCase();
     let data = booksData;
     let dataResult = [];
@@ -16,7 +16,7 @@ const Search = ({booksData, searchValue}) => {
 
     if (dataResult.length > 0) {
         listItems = dataResult.map((book) =>
-            <BookView key={book.id} title={book.title} author={book.author} poster_image={book.poster_image}/>
+            <BookView onClick={() => props.showBook(book)} key={book.id} title={book.title} author={book.author} poster_image={book.poster_image}/>
         );
     } else {
         listItems = [<NotFound search />];

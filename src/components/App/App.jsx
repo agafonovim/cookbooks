@@ -16,10 +16,12 @@ const App = () => {
     const updateBooksData = () => JSON.parse(localStorage.getItem("cookbooks"));
     const [booksData, setBooksData] = useState(updateBooksData);
     const [showModal, setModal] = useState(0);
+    const [activeBook, setActiveBook] = useState(null);
     const [modalStatus, setModalStatus] = useState(null);
     let modal = (showModal ? <Modal modalStatus={modalStatus}
                                     cancel={() => setModal(0)}
-                                    updateBooks={() => setBooksData(updateBooksData)}/> : null);
+                                    book={activeBook}
+                                    updateBooks={() => setBooksData(updateBooksData)} /> : null);
 
     return (
         <Router>
@@ -35,7 +37,7 @@ const App = () => {
                     <Route exact path="/">
                         <Redirect to="/browse" />
                     </Route>
-                    <Route path="/browse" render={() => <Browse booksData={booksData} />} />
+                    <Route path="/browse" render={() => <Browse booksData={booksData} showBook={(book) => {setActiveBook(book); setModal(!showModal); setModalStatus("view");}} />}/>
                     <Route path="*" render={() => <NotFound page />} />
                 </Switch>
             </div>
