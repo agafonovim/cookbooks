@@ -1,0 +1,35 @@
+.modal-nav__item {
+
+  button {
+    font-size: 13px;
+    color: #78829d;
+    padding: 12.5px 20px;
+    line-height: 0.8;
+    display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &.active {
+      background-color: #97b3ce;
+      color: #ffffff;
+      outline: none;
+    }
+
+    &:hover {
+      @extend .active;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+
+    i {
+      margin: 0 10px 0 0;
+      font-size: 14px;
+    }
+  }
+}

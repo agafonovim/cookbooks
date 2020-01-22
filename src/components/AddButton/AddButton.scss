@@ -1,0 +1,36 @@
+.add-button {
+  display: block;
+  width: 160px;
+  height: 44px;
+  color: #ffffff;
+  background-color: #f2795a;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0;
+  vertical-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f58a6e;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &__layer {
+    border-bottom: 1px solid #323949;
+    height: 120px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    margin-right: 9px;
+    font-size: 16px;
+    vertical-align: bottom;
+  }
+}

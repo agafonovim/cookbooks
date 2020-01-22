@@ -1,0 +1,21 @@
+.add_success-modal {
+  .main {
+    min-height: 135px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-content {
+      background-color: #fff;
+      width: 100%;
+      padding: 50px 45px;
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      color: #444c63;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+}

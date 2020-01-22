@@ -1,0 +1,11 @@
+.page__no-matches-found {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text-muted {
+    color: #929292;
+  }
+}

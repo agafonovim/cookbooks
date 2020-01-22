@@ -1,0 +1,29 @@
+.page__not-found {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .image-not-found {
+    background-image: url("../../assets/img/page-not-found.png");
+    height: 300px;
+    width: 400px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) { height: 350px; width: 467px; }
+    @media (min-width: 992px) { height: 500px; width: 667px;}
+    @media (min-width: 1200px) { height: 600px; width: 800px; }
+  }
+
+  .search-not-found {
+    background-image: url("../../assets/img/search-not-found.png");
+    margin-top: 20px;
+    height: 256px;
+    width: 256px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,14 @@
+.filters {
+  border-bottom: 1px solid #dadfea;
+  background-color: #eef1f7;
+  padding: 0 20px;
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 49px;
+  justify-content: space-between;
+
+  .filter + .filter {
+    margin-left: 3px;
+  }
+}

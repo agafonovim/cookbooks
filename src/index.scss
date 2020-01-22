@@ -1,0 +1,16 @@
+// Import Fonts
+// --------------------------
+// FontAwesome | Icons
+@import "./assets/scss/fontawesome/font-awesome.scss";
+// --------------------------
+// Myriad Pro
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('./assets/fonts/myriad_pro/MyriadPro-Regular.eot');
+	src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+		url('./assets/fonts/myriad_pro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/myriad_pro/MyriadPro-Regular.woff') format('woff'),
+		url('./assets/fonts/myriad_pro/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

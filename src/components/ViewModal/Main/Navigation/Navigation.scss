@@ -1,0 +1,12 @@
+.modal-nav {
+  display: flex;
+  flex-flow: column wrap;
+  width: 200px;
+  flex: none;
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
