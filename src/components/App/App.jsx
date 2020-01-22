@@ -14,6 +14,7 @@ import Modal from "../Modal/Modal";
 
 const App = () => {
     const updateBooksData = () => JSON.parse(localStorage.getItem("cookbooks"));
+    const [lastAddedBook, setLastAddedBook] = useState(null);
     const [booksData, setBooksData] = useState(updateBooksData);
     const [showModal, setModal] = useState(0);
     const [activeBook, setActiveBook] = useState(null);
@@ -21,6 +22,9 @@ const App = () => {
     let modal = (showModal ? <Modal modalStatus={modalStatus}
                                     cancel={() => setModal(0)}
                                     book={activeBook}
+                                    lastAddedBook={lastAddedBook}
+                                    setLastAddedBook={setLastAddedBook}
+                                    setModalStatus={setModalStatus}
                                     updateBooks={() => setBooksData(updateBooksData)} /> : null);
 
     return (

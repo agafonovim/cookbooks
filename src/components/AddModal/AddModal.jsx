@@ -6,7 +6,7 @@ import Main from "./Main/Main";
 import {Formik, Form} from "formik";
 import * as Yup from 'yup';
 
-const AddModal = ({updateBooks, ...props}) => {
+const AddModal = ({updateBooks, setModalStatus, setLastAddedBook, ...props}) => {
 
     const addToLocalStorage = (name, value) => {
         let existing = JSON.parse(localStorage.getItem(name));
@@ -48,8 +48,9 @@ const AddModal = ({updateBooks, ...props}) => {
                     })}
                     onSubmit={(values) => {
                         addToLocalStorage("cookbooks", values);
+                        setLastAddedBook(values.title);
                         updateBooks();
-                        props.cancel();
+                        setModalStatus("added_successfully");
                     }}
                 >
                     <Form>
