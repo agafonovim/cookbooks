@@ -1,11 +1,16 @@
 import React from 'react';
-import './Sidebar.scss';
 import Navigation from "../Navigation/Navigation";
 import AddButton from "../AddButton/AddButton";
 
-const Sidebar = props => (
+import './Sidebar.scss';
+
+/*
+    Сайдбар
+*/
+
+const Sidebar = ({showAddModal}) => (
     <aside className="sidebar">
-        <AddButton onClick={props.onClick} />
+        <AddButton onClick={showAddModal} />
         <Navigation />
     </aside>
 );

@@ -1,5 +1,10 @@
 import React from 'react';
+
 import './Header.scss';
+
+/*
+    Хэдер Browse
+*/
 
 const Header = ({title, children}) => (
     <header className="header header__page-header">

@@ -1,7 +1,11 @@
 import React from 'react';
+import { Field } from "formik";
+
 import './Textarea.scss';
 
-import { Field } from "formik";
+/*
+    Textarea в модальном окне добавления книги
+*/
 
 const Textarea = ({title, required, ...props}) => (
     <div className="textarea">
@@ -11,6 +15,7 @@ const Textarea = ({title, required, ...props}) => (
             id={title.toLowerCase()}
             name={title.toLowerCase()}
             placeholder={`Enter ${title}`}
+            {...props}
         />
     </div>
 );

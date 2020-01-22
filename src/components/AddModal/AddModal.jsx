@@ -1,23 +1,29 @@
 import React from 'react';
-import './AddModal.scss';
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Main from "./Main/Main";
 import {Formik, Form} from "formik";
 import * as Yup from 'yup';
 
+import './AddModal.scss';
+
+/*
+    Модальное окно добавления книги
+*/
+
 const AddModal = ({updateBooks, setModalStatus, setLastAddedBook, ...props}) => {
 
+    // Функция добавления в локалсторадж заданных значений (value) под именем (name)
     const addToLocalStorage = (name, value) => {
-        let existing = JSON.parse(localStorage.getItem(name));
-        existing = existing ? existing : [];
-        existing.push({...value, id: (existing.length + 1)});
-        localStorage.setItem(name, JSON.stringify(existing));
+        let existing = JSON.parse(localStorage.getItem(name)); // Парсим JSON локалсторадж и переводим в массив
+        existing = existing ? existing : []; // Проверяем есть что внутри или нет, если да - создаем пустой массив
+        existing.push({...value, id: (existing.length + 1)}); // Добавляем объект книги в конец массива
+        localStorage.setItem(name, JSON.stringify(existing)); // Переводим всё в JSON и грузим в локалсторадж
     };
 
     return (
             <div className="add-modal">
-                <Header title="Add New Books" cancel={props.cancel}/>
+                <Header title="Add New Books" {...props} />
                 <Formik
                     initialValues={{
                         title: "",

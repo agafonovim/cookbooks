@@ -1,14 +1,18 @@
 import React from 'react';
 import { Tabs, Panel } from '@bumaga/tabs';
+import Navigation from "./Navigation/Navigation";
 
 import './Main.scss';
-import Navigation from "./Navigation/Navigation";
 
 /* Импорт табов */
 import General from "../Tabs/General";
 import Genre from "../Tabs/Genre";
 import Info from "../Tabs/Info";
 import Poster from "../Tabs/Poster";
+
+/*
+    Главная часть в модальном окне просмотра книги
+*/
 
 const Main = ({book}) => {
     return (

@@ -3,7 +3,9 @@ import Input from "../Main/Input/Input";
 import { useFormikContext } from 'formik';
 
 const General = () => {
+
     const formik = useFormikContext();
+
     return (
         <>
             <Input title="Title" type="text" required>
@@ -23,7 +25,7 @@ const General = () => {
             </div>
             <Input title="Summary" type="text" />
         </>
-    )
+    );
 };
 
 export default General;

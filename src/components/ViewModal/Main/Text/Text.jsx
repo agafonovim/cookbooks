@@ -1,5 +1,10 @@
 import React from 'react';
+
 import './Text.scss';
+
+/*
+    Текстовое поле или вывод ошибки в модальном окне просмотра книги
+*/
 
 const Text = ({title, text}) => (
     <div className="text">

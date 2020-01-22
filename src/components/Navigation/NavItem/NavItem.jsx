@@ -1,7 +1,11 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
+
 import './NavItem.scss';
 
-import { NavLink } from "react-router-dom";
+/*
+    Строчка меню в сайдбаре
+*/
 
 const NavItem = ({to, icon, name}) => (
     <li className="nav__item">

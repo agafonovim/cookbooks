@@ -1,7 +1,11 @@
 import React from 'react';
+import { Field } from "formik";
+
 import './Input.scss';
 
-import { Field } from "formik";
+/*
+    Поле ввода информации в модальнм окне
+*/
 
 const Input = ({title, required, children, ...props}) => (
     <div className="input">

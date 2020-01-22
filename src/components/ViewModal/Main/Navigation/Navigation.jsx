@@ -1,6 +1,11 @@
 import React from 'react';
-import './Navigation.scss';
 import NavItem from "./NavItem/NavItem";
+
+import './Navigation.scss';
+
+/*
+    Меню навигации в модальном окне просмотра книги
+*/
 
 const Navigation = props => (
     <div className="modal-nav">

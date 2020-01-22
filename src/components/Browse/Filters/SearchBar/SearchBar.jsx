@@ -1,8 +1,14 @@
 import React from 'react';
 import { useTabState } from '@bumaga/tabs';
+
 import './SearchBar.scss';
 
+/*
+    Поиск
+*/
+
 const SearchBar = ({setSearchValue}) => {
+
     const { onClick } = useTabState();
 
     return (
@@ -10,7 +16,7 @@ const SearchBar = ({setSearchValue}) => {
             <input type="search" name="search_request" onChange={(e) => {setSearchValue(e); onClick();}} placeholder="Enter Keywords" />
             <i className="fa fa-search" aria-hidden="true"></i>
         </div>
-    )
+    );
 };
 
 export default SearchBar;

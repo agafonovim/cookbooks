@@ -1,6 +1,11 @@
 import React from 'react';
-import './Navigation.scss';
 import NavItem from "./NavItem/NavItem";
+
+import './Navigation.scss';
+
+/*
+    Меню в сайдбаре
+*/
 
 const Navigation = () => (
     <nav className="nav">

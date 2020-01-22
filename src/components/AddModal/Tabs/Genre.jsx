@@ -6,7 +6,7 @@ const Genre = () => {
         <>
             <Input title="Genre" type="text" />
         </>
-    )
+    );
 };
 
 export default Genre;

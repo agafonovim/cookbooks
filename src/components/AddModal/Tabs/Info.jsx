@@ -6,7 +6,7 @@ const Info = () => {
         <>
             <Textarea title="Information" />
         </>
-    )
+    );
 };
 
 export default Info;

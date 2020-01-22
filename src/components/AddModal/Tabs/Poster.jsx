@@ -4,7 +4,7 @@ import { useFormikContext } from 'formik';
 
 const Poster = props => {
     const formik = useFormikContext();
-
+    // Поддерживаемые форматы загружаемого изображения
     const SUPPORTED_FORMATS = [
         "image/jpg",
         "image/jpeg",
@@ -12,12 +12,13 @@ const Poster = props => {
         "image/png",
         "image/svg+xml"
     ];
-
+    // Функция проверки на соответствие формату
     const checkFormat = value => value && SUPPORTED_FORMATS.includes(value.type);
 
     const handlePosterImage = (e) => {
         let input = e.target.files[0];
 
+        // Если формат совпадает, читаем файл и переводим в base64, либо отправляем ошибку в FormikContext
         if (checkFormat(input)) {
             let reader = new FileReader();
 
@@ -28,7 +29,7 @@ const Poster = props => {
         } else {
             formik.setErrors({poster: "Unsupported format"});
         }
-    }
+    };
 
     return (
         <>
@@ -37,7 +38,7 @@ const Poster = props => {
             </Input>
             {formik.values.poster_image && <img src={formik.values.poster_image} alt="preview_image" height={250} />}
         </>
-    )
+    );
 };
 
 export default Poster;

@@ -1,5 +1,10 @@
 import React from 'react';
+
 import './Image.scss';
+
+/*
+    Вывод картинки или текста ошибки в модальное окно просмотра книги
+*/
 
 const Image = ({title, image}) => (
     <div className="image">

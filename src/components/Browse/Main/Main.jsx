@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './Main.scss';
 import Filters from "../Filters/Filters";
 import { Tabs, usePanelState } from '@bumaga/tabs';
 import AllBooks from "../Tabs/AllBooks";
@@ -8,12 +7,23 @@ import Search from "../Tabs/Search";
 import FreeBooks from "../Tabs/FreeBooks";
 import MostPopular from "../Tabs/MostPopular";
 
+import './Main.scss';
+
+/*
+    Для работы табов в Browse (фильтров)
+*/
+
 const Panel = ({ component }) => {
     const isActive = usePanelState();
     return isActive ? component : null;
 };
 
+/*
+    Main в Browse
+*/
 const Main = ({booksData, ...props}) => {
+
+    // Стейт для значения поиска
     const [searchValue, setSearchValue] = useState(0);
 
     return (
@@ -27,7 +37,7 @@ const Main = ({booksData, ...props}) => {
                 <Panel component={<Search booksData={booksData} searchValue={searchValue} {...props} />} />
             </div>
         </Tabs>
-    )
+    );
 };
 
 export default Main;
