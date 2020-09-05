@@ -8,4 +8,7 @@
 5. Библиотека Formik
 
 ## Интерфейс в картинках
-![alt text](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_1.jpg)
+- Главная страница
+![Главная страница](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_1.jpg)
+- Модальное окно добавления книги
+![Модальное окно](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_5.jpg)
