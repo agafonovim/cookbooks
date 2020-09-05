@@ -12,7 +12,10 @@
 - Главная страница
 
 ![Главная страница](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_1.jpg)
+![Главная страница](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_8.jpg)
 
 - Модальное окно добавления книги
 
 ![Модальное окно](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_5.jpg)
+![Модальное окно](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_6.jpg)
+![Модальное окно](https://github.com/agafonovim/cookbooks/blob/master/docs/preview_7.jpg)
