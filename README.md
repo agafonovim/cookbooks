@@ -1,2 +1,5 @@
-# cookbooks
-I love to cook
+# Приложение "Книги"
+
+Для разаботки использовались следующие библиотеки:
+1. React.js (Create React App)
+2. Formik
